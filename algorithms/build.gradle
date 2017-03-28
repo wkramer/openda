@@ -1,0 +1,7 @@
+dependencies {
+    compile group: "org.openda", name: "core", version: "3.0"
+    compile group: "org.openda", name: "models", version: "3.0"
+    compile group: "org.openda", name: "observers", version: "3.0"
+
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+}

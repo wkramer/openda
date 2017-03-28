@@ -1,0 +1,16 @@
+
+dependencies {
+    compile group: "org.openda", name: "core-castor", version: "3.0"
+    compile group: 'edu.ucar', name: 'netcdf', version: '4.3.23'
+    compile group: 'xom', name: 'xom', version: '1.2.5'
+    compile group: 'gov.nist.math', name: 'jama', version: '1.0.3'
+    compile group: 'org.swinglabs', name: 'swing-layout', version: '1.0.3'
+    compile group: 'junit', name: 'junit', version: '3.8.1'
+    compile group: 'due', name: 'utilities', version: '1.0'
+    compile group: 'gov.noaa', name: 'sgt', version: '3.0'
+    compile group: 'com.incors', name: 'alloy', version: '1.0'
+    compile group: 'nl.wldelft', name: 'da.tools', version: '13.0'
+    compile group: 'com.jgoodies', name: 'jgoodies-looks', version: '2.7.0'
+    compile group: 'com.jgoodies', name: 'jgoodies-common', version: '1.8.1'
+}
+

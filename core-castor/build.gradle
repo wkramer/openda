@@ -1,0 +1,47 @@
+def xmlSchemasDir="xmlSchemas"
+def generatedSourceDir="src/main/java"
+def namespace="org.openda.core.io.castorgenerated"
+def mainXsd="openDA.xsd"
+
+configurations {
+    castor
+}
+
+task cleanCastorGeneratedClasses(type: Delete){
+    delete generatedSourceDir
+}
+
+task castor(type: JavaExec) {
+    inputs.dir(xmlSchemasDir)
+    outputs.dir(generatedSourceDir)
+    classpath = configurations.castor
+    main = 'org.exolab.castor.builder.SourceGenerator'
+    jvmArgs "-Dorg.castor.user.properties.location=${projectDir}/castorbuilder.properties"
+    args = [
+        "-i","${xmlSchemasDir}/${mainXsd}",
+        "-package",namespace,
+        "-dest",generatedSourceDir,
+//        "-verbose",
+        "-f",
+        "-types","j2"].toList()
+    workingDir projectDir
+}
+
+compileJava.dependsOn castor
+
+clean.dependsOn cleanCastorGeneratedClasses
+
+dependencies {
+
+    compile (group: 'castor', name: 'castor', version: '0.9.5')
+
+    castor (group: 'castor', name: 'castor', version: '0.9.5')
+    castor (group: 'xerces', name: 'xercesImpl', version: '2.0.0')
+    castor (group: 'xalan', name: 'xalan', version: '2.1.0')
+    castor files ( projectDir  )
+}
+
+
+
+
+

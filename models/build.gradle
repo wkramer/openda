@@ -1,0 +1,5 @@
+
+dependencies {
+    compile group: "org.openda", name: "core", version: "3.0"
+    compile group: "org.openda", name: "observers", version: "3.0"
+}
