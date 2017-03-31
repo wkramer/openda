@@ -103,9 +103,9 @@ public class OpenDaTestSupport {
 
 	// fixed names, prefixes, etc
     static private String testDataDirPostfix   = "testData";
-    static private String testRunDirPrefix     = "opendaTestRuns";
-    static private String javaTestDirPrefix    = "java"+File.separator+"test";
-    static private String publicProjectDirName = "openda_public";
+    static private String testRunDirPrefix     = "testRunDir";
+    static private String javaTestDirPrefix    = "src"+File.separator+"test"+File.separator+"java";
+    static private String publicProjectDirName = "openda";
 	static private String publicProjectDirNameDepricated = "public";
 
 	//global attribute names.
@@ -166,8 +166,9 @@ public class OpenDaTestSupport {
 				}
             	workInModule = false;
             }else{
-            	throw new RuntimeException("Requested module is "+moduleName
-            			+" but the test started in module "+moduleHintName);
+				workInModule = true;
+//            	throw new RuntimeException("Requested module is "+moduleName
+//            			+" but the test started in module "+moduleHintName);
             }
         }else{
 			throw new RuntimeException("No file with name unit_test_info.txt found"
@@ -465,12 +466,12 @@ public class OpenDaTestSupport {
 		int     nsame=0;
 		int     npoint=0;
 		boolean inVal=false;
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 		for (int i=0; i<line1.length(); i++){
 			if (!inVal){
 				if (line1.substring(i,1).matches("[0-9]")) inVal=true;
