@@ -10,6 +10,7 @@
 
 # Gradle build dir
 /build/
+.gradle/
 
 # Test run dir
 /testRunDir/
