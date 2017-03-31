@@ -8,6 +8,8 @@
 *.war
 *.ear
 
+*-castor/src/
+
 # Gradle build dir
 build/
 .gradle/
