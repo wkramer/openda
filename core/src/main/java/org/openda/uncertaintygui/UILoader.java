@@ -20,7 +20,6 @@
 
 package org.openda.uncertaintygui;
 
-import com.incors.plaf.alloy.AlloyLookAndFeel;
 import org.exolab.castor.util.LocalConfiguration;
 
 import javax.swing.*;
@@ -77,37 +76,6 @@ public class UILoader {
 		//start program without loading any files with standard UA application type.
 		LocalConfiguration.getInstance().getProperties().setProperty("org.exolab.castor.indent", "true");
 	}
-
-	/**
-	 * Set the look and feel for the whole application.
-	 */
-	private static void setLookAndFeel() {
-
-		//Custom theme colors
-		//Color contrast = new Color(188, 188, 206);
-		Color contrast = new Color(190, 203, 222);
-		Color standard = new Color(241, 240, 227);
-		Color desktop = new Color(164, 164, 158);
-		Color selection = new Color(96, 128, 172);
-		Color rollover = new Color(255, 207, 49);
-		Color highlight = new Color(249, 224, 137);
-
-		//Create custom theme
-		com.incors.plaf.alloy.AlloyTheme theme = com.incors.plaf.alloy.themes.custom.CustomThemeFactory.createTheme(contrast, standard, desktop, selection, rollover, highlight);
-		AlloyLookAndFeel.setProperty("alloy.licenseCode", "4#James_Brown#1g2r7nj#5z9r8g");
-		javax.swing.LookAndFeel alloy = new com.incors.plaf.alloy.AlloyLookAndFeel(theme);
-		AlloyLookAndFeel.setProperty("alloy.isLookAndFeelFrameDecoration", "true");
-
-		try {
-			UIManager.setLookAndFeel(alloy);
-		} catch (UnsupportedLookAndFeelException e) {
-			//No action required
-		}
-
-		JFrame.setDefaultLookAndFeelDecorated(true);
-		JDialog.setDefaultLookAndFeelDecorated(true);
-	}
-
 
 	/**
 	 * Displays a dialog with information on how to start the program correctly.
