@@ -21,9 +21,14 @@ subprojects {
     version = '3.0'
 
     repositories {
-        mavenLocal()
         maven {
             url 'http://artifacts.unidata.ucar.edu/content/repositories/unidata-releases/'
+        }
+        maven {
+            url "file://${rootDir}/repo/"
+        }
+        maven {
+            url "file://${rootDir}/../repo/"
         }
         mavenCentral()
     }
