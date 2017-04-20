@@ -42,6 +42,7 @@ On https://github.com/wkramer there are three test repositories I create by spli
 - https://github.com/wkramer/openda (core, observer, algoritms and models)
 - https://github.com/wkramer/openda-application (gui)
 - https://github.com/wkramer/model-openfoam (openfoam wrapper)
+- https://github.com/wkramer/repo (project Maven repos)
 
 Only the history for each part is preserved (using `git filter-branch --tree-filter` or `git filter-branch --subdirectory-filter`) to keep the repositories size small. 
 
