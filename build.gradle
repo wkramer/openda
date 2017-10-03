@@ -17,8 +17,7 @@ subprojects {
     apply plugin: 'maven'
 
     test {
-        dependsOn cleanTest
-        testLogging.showStandardStreams = true
+        testLogging.showStackTraces = true
     }
 
 
