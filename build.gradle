@@ -16,10 +16,10 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
 
-    test {
-        testLogging.showStackTraces = true
+    test.testLogging {
+        events "failed"
+        exceptionFormat "short"
     }
-
 
     group = 'org.openda'
     version = '3.0'
