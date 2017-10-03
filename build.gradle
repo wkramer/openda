@@ -16,6 +16,11 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
 
+    test {
+        dependsOn cleanTest
+        testLogging.showStandardStreams = true
+    }
+
 
     group = 'org.openda'
     version = '3.0'
