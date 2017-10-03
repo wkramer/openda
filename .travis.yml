@@ -1,3 +1,17 @@
-sudo: required
-install: ./travis_run.sh
 language: java
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  - git clone https://github.com/wkramer/repo.git
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
