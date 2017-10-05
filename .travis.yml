@@ -10,18 +10,18 @@ script: skip
 
 jobs:
   include:
-    - stage: test
+    - stage: check
       script: gradle :core:check
-    - stage: test
+    - stage: check
       script: gradle :observers:check
-    - stage: test
+    - stage: check
       script: gradle :algorithms:check
-    - stage: test
+    - stage: check
       script: gradle :models:check
 
 stages:
-  - compile
   - test
+  - check
 
 before_install:
   - git clone https://github.com/wkramer/repo.git
