@@ -19,6 +19,10 @@ jobs:
     - stage: test
       script: gradle :models:check
 
+stages:
+  - compile
+  - test
+
 before_install:
   - git clone https://github.com/wkramer/repo.git
 
