@@ -6,6 +6,19 @@ jdk:
   - oraclejdk8
   - oraclejdk9
 
+script: skip
+
+jobs:
+  include:
+    - stage: test
+      script: gradle :core:check
+    - stage: test
+      script: gradle :observers:check
+    - stage: test
+      script: gradle :algorithms:check
+    - stage: test
+      script: gradle :models:check
+
 before_install:
   - git clone https://github.com/wkramer/repo.git
 
