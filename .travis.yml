@@ -2,8 +2,9 @@ language: java
 sudo: false
 
 jdk:
-  - oraclejdk7
+  - openjdk7
   - oraclejdk8
+  - oraclejdk9
 
 before_install:
   - git clone https://github.com/wkramer/repo.git
