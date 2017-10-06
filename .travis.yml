@@ -16,6 +16,7 @@ jobs:
       script: gradle :observers:check
     - stage: check
       script: gradle :algorithms:check
+      env: TZ='Europe/Amsterdam'
     - stage: check
       script: gradle :models:check
 
