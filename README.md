@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wkramer/openda.svg?branch=master)](https://travis-ci.org/wkramer/openda)
+
 OpenDA with Gradle and Pride
 ----------------------------
 
