@@ -67,6 +67,7 @@ public class BBUtils {
     }
 
 	public static void makeDirectoryCloneForTestRun(File source, File target) {
+		if (source==null) return;
 		checkSourceAndTarget(source, target, true);
 		if (target.exists()) {
 			deleteDirectory(target);
