@@ -98,6 +98,8 @@ When developing a model wrapper you add openda as an external dependency:
 
 If we publish the OpenDA core libraries (jar files) on a Maven repository, Gradle can download these automatically. No need to checkout the OpenDA core repository. But if a local workdirectory containing the OpenDA core is present, Gradle will automatically use that instead of obtaining the libraries.
 
+We can host a [maven repository on github](https://github.com/github/maven-plugins#readme).
+
 ## Todo
 
 - OpenDaTestSupport needs to be more flexible. Place the `testRunDir` in module directory insted of the root project dir?  I have changed some stuff already, but there are still some test failing.
